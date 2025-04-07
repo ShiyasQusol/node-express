@@ -6,6 +6,11 @@ app.get("/", (req, res) => {
 	res.send("Welcome to Shiyas Site")
 })
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
 	console.log(`Server is running at ${PORT}`)
 })
+
+module.exports = {
+	server,
+	app
+}
